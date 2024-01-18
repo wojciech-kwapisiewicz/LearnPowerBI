@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Product Lookup\"]"
+        "value": "[\"Territory Lookup\",\"Product Lookup\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -1211,6 +1211,112 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "Territory Lookup",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "SalesTerritoryKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isNullable": false,
+            "lineageTag": "07b2f2d7-e82b-4d3d-b1a5-8ba26a31487c",
+            "sourceColumn": "SalesTerritoryKey",
+            "sourceProviderType": "int",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "SalesTerritoryAlternateKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "636194c4-ee1a-45e8-99a7-a0b584681528",
+            "sourceColumn": "SalesTerritoryAlternateKey",
+            "sourceProviderType": "int",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "SalesTerritoryRegion",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isNullable": false,
+            "lineageTag": "ae48f413-02a5-471b-b3a6-2acfbfe427f9",
+            "sourceColumn": "SalesTerritoryRegion",
+            "sourceProviderType": "nvarchar(50)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SalesTerritoryCountry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isNullable": false,
+            "lineageTag": "44cc98c1-b3c6-4159-b91d-f4fd7665d257",
+            "sourceColumn": "SalesTerritoryCountry",
+            "sourceProviderType": "nvarchar(50)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SalesTerritoryGroup",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "654cd5fe-587c-45db-ae0b-426897d9a06b",
+            "sourceColumn": "SalesTerritoryGroup",
+            "sourceProviderType": "nvarchar(50)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "bfdfb20c-bee9-42e6-9df3-9d26346163ad",
+        "partitions": [
+          {
+            "name": "Territory Lookup",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\".\", \"AdventureWorksDW2019\", [Query=\"SELECT [SalesTerritoryKey]#(lf)      ,[SalesTerritoryAlternateKey]#(lf)      ,[SalesTerritoryRegion]#(lf)      ,[SalesTerritoryCountry]#(lf)      ,[SalesTerritoryGroup]#(lf)      ,[SalesTerritoryImage]#(lf)  FROM [dbo].[DimSalesTerritory]\", CreateNavigationProperties=false])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }
