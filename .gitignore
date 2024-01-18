@@ -398,6 +398,3 @@ FodyWeavers.xsd
 *.sln.iml
 *.abf
 **/*/.pbi/localSettings.json
-
-/AdventureWorksPB/AdventureWorksPB_Reports.Dataset/.pbi/localSettings.json
-/AdventureWorksPB/AdventureWorksPB_Reports.Report/.pbi/localSettings.json
