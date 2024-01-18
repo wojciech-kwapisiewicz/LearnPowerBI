@@ -348,7 +348,7 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
+            "dataType": "decimal",
             "lineageTag": "f796d627-c3f4-4e7b-a52d-ea344010961d",
             "sourceColumn": "DealerPrice",
             "summarizeBy": "sum"
@@ -458,19 +458,6 @@
             "summarizeBy": "none"
           },
           {
-            "name": "ThaiDescription",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "e5478a1e-f0b6-46e1-9c9e-3c0d5da2093e",
-            "sourceColumn": "ThaiDescription",
-            "summarizeBy": "none"
-          },
-          {
             "name": "GermanDescription",
             "annotations": [
               {
@@ -481,19 +468,6 @@
             "dataType": "string",
             "lineageTag": "ac043d0e-695d-47af-af7b-69e114fb0ccc",
             "sourceColumn": "GermanDescription",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "JapaneseDescription",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "3d1c9bfd-177d-4ce1-bb6b-6502d75fa596",
-            "sourceColumn": "JapaneseDescription",
             "summarizeBy": "none"
           },
           {
@@ -581,9 +555,11 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(\".\", \"AdventureWorksDW2019\", [Query=\"SELECT [ProductKey]#(lf)      ,[ProductAlternateKey]#(lf)      ,[ProductSubcategoryKey]#(lf)      ,[WeightUnitMeasureCode]#(lf)      ,[SizeUnitMeasureCode]#(lf)      ,[EnglishProductName]#(lf)      ,[SpanishProductName]#(lf)      ,[FrenchProductName]#(lf)      ,[StandardCost]#(lf)      ,[FinishedGoodsFlag]#(lf)      ,[Color]#(lf)      ,[SafetyStockLevel]#(lf)      ,[ReorderPoint]#(lf)      ,[ListPrice]#(lf)      ,[Size]#(lf)      ,[SizeRange]#(lf)      ,[Weight]#(lf)      ,[DaysToManufacture]#(lf)      ,[ProductLine]#(lf)      ,[DealerPrice]#(lf)      ,[Class]#(lf)      ,[Style]#(lf)      ,[ModelName]#(lf)      ,[LargePhoto]#(lf)      ,[EnglishDescription]#(lf)      ,[FrenchDescription]#(lf)      ,[ChineseDescription]#(lf)      ,[ArabicDescription]#(lf)      ,[HebrewDescription]#(lf)      ,[ThaiDescription]#(lf)      ,[GermanDescription]#(lf)      ,[JapaneseDescription]#(lf)      ,[TurkishDescription]#(lf)      ,[StartDate]#(lf)      ,[EndDate]#(lf)      ,[Status]#(lf)  FROM [dbo].[DimProduct]\", CreateNavigationProperties=false])",
+                "    Source = Sql.Database(\".\", \"AdventureWorksDW2019\", [Query=\"SELECT [ProductKey]#(lf)      ,[ProductAlternateKey]#(lf)      ,[ProductSubcategoryKey]#(lf)      ,[WeightUnitMeasureCode]#(lf)      ,[SizeUnitMeasureCode]#(lf)      ,[EnglishProductName]#(lf)      ,[SpanishProductName]#(lf)      ,[FrenchProductName]#(lf)      ,[StandardCost]#(lf)      ,[FinishedGoodsFlag]#(lf)      ,[Color]#(lf)      ,[SafetyStockLevel]#(lf)      ,[ReorderPoint]#(lf)      ,[ListPrice]#(lf)      ,[Size]#(lf)      ,[SizeRange]#(lf)      ,[Weight]#(lf)      ,[DaysToManufacture]#(lf)      ,[ProductLine]#(lf)      ,[DealerPrice]#(lf)      ,[Class]#(lf)      ,[Style]#(lf)      ,[ModelName]#(lf)      ,[LargePhoto]#(lf)      ,[EnglishDescription]#(lf)      ,[FrenchDescription]#(lf)      ,[ChineseDescription]#(lf)      ,[ArabicDescription]#(lf)      ,[HebrewDescription]#(lf)      ,[ThaiDescription]#(lf)      ,[GermanDescription]#(lf)      ,[JapaneseDescription]#(lf)      ,[TurkishDescription]#(lf)      ,[StartDate]#(lf)      ,[EndDate]#(lf)      ,[Status]#(lf)  FROM [dbo].[DimProduct]\", CreateNavigationProperties=false]),",
+                "    #\"Change to Currency\" = Table.TransformColumnTypes(Source,{{\"DealerPrice\", Currency.Type}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Change to Currency\",{\"ThaiDescription\", \"JapaneseDescription\"})",
                 "in",
-                "    Source"
+                "    #\"Removed Columns\""
               ],
               "type": "m"
             }
