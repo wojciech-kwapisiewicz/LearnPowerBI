@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../AdventureWorksPB_Reports.Dataset"
+    },
+    "byConnection": null
+  }
+}
