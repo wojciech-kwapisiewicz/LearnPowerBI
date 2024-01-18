@@ -397,4 +397,7 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 *.abf
-*/.pbi/localSettings.json
+**/*/.pbi/localSettings.json
+
+/AdventureWorksPB/AdventureWorksPB_Reports.Dataset/.pbi/localSettings.json
+/AdventureWorksPB/AdventureWorksPB_Reports.Report/.pbi/localSettings.json
