@@ -33,6 +33,32 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 86
+          },
+          "nodeIndex": "Product Category Lookup",
+          "nodeLineageTag": "ea63aa7e-c557-4d25-b46b-b5752aa12a52",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 74
+          },
+          "nodeIndex": "Product Subcategory Lookup",
+          "nodeLineageTag": "386fe30e-6c1b-499b-9214-976de88c305c",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

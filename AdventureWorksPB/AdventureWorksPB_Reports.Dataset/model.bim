@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Territory Lookup\",\"Product Lookup\"]"
+        "value": "[\"Territory Lookup\",\"Product Lookup\",\"Product Category Lookup\",\"Product Subcategory Lookup\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -149,32 +149,6 @@
             "dataType": "string",
             "lineageTag": "c04867cb-0aaf-4357-81fd-de35b02dfb84",
             "sourceColumn": "EnglishProductName",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "SpanishProductName",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "f6a0b30f-5a66-457d-a3a5-08a5b6f32555",
-            "sourceColumn": "SpanishProductName",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "FrenchProductName",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "f4d43809-dfa0-4a50-95a9-d78ba3d258f4",
-            "sourceColumn": "FrenchProductName",
             "summarizeBy": "none"
           },
           {
@@ -406,84 +380,6 @@
             "summarizeBy": "none"
           },
           {
-            "name": "FrenchDescription",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "70ed2f3e-4e43-414e-8784-fa50c1a8c343",
-            "sourceColumn": "FrenchDescription",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "ChineseDescription",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "9540e5d2-58a8-4a7b-93c7-2210fbb6d81a",
-            "sourceColumn": "ChineseDescription",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "ArabicDescription",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "fa97f0ef-41e6-4d36-a173-4d177e51b0fb",
-            "sourceColumn": "ArabicDescription",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "HebrewDescription",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "50c3fd22-c3cf-4eff-90c9-ce492f78677b",
-            "sourceColumn": "HebrewDescription",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "GermanDescription",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "ac043d0e-695d-47af-af7b-69e114fb0ccc",
-            "sourceColumn": "GermanDescription",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "TurkishDescription",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "f921d504-0e59-4daf-8987-17d7ef1ec590",
-            "sourceColumn": "TurkishDescription",
-            "summarizeBy": "none"
-          },
-          {
             "name": "StartDate",
             "annotations": [
               {
@@ -545,6 +441,19 @@
             "lineageTag": "374daf24-92af-4fe5-a93e-6a373886d7a7",
             "sourceColumn": "Status",
             "summarizeBy": "none"
+          },
+          {
+            "name": "SKU Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "90c65f31-f38e-4fb1-93f1-8eade76be163",
+            "sourceColumn": "SKU Type",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "8b3e7ffb-fbaa-450a-87f6-835000331cc1",
@@ -555,11 +464,15 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(\".\", \"AdventureWorksDW2019\", [Query=\"SELECT [ProductKey]#(lf)      ,[ProductAlternateKey]#(lf)      ,[ProductSubcategoryKey]#(lf)      ,[WeightUnitMeasureCode]#(lf)      ,[SizeUnitMeasureCode]#(lf)      ,[EnglishProductName]#(lf)      ,[SpanishProductName]#(lf)      ,[FrenchProductName]#(lf)      ,[StandardCost]#(lf)      ,[FinishedGoodsFlag]#(lf)      ,[Color]#(lf)      ,[SafetyStockLevel]#(lf)      ,[ReorderPoint]#(lf)      ,[ListPrice]#(lf)      ,[Size]#(lf)      ,[SizeRange]#(lf)      ,[Weight]#(lf)      ,[DaysToManufacture]#(lf)      ,[ProductLine]#(lf)      ,[DealerPrice]#(lf)      ,[Class]#(lf)      ,[Style]#(lf)      ,[ModelName]#(lf)      ,[LargePhoto]#(lf)      ,[EnglishDescription]#(lf)      ,[FrenchDescription]#(lf)      ,[ChineseDescription]#(lf)      ,[ArabicDescription]#(lf)      ,[HebrewDescription]#(lf)      ,[ThaiDescription]#(lf)      ,[GermanDescription]#(lf)      ,[JapaneseDescription]#(lf)      ,[TurkishDescription]#(lf)      ,[StartDate]#(lf)      ,[EndDate]#(lf)      ,[Status]#(lf)  FROM [dbo].[DimProduct]\", CreateNavigationProperties=false]),",
+                "    Source = Sql.Database(\".\", \"AdventureWorksDW2019\", [Query=\"SELECT [ProductKey]#(lf)      ,[ProductAlternateKey]#(lf)      ,[ProductSubcategoryKey]#(lf)      ,[WeightUnitMeasureCode]#(lf)      ,[SizeUnitMeasureCode]#(lf)      ,[EnglishProductName]#(lf)      ,[StandardCost]#(lf)      ,[FinishedGoodsFlag]#(lf)      ,[Color]#(lf)      ,[SafetyStockLevel]#(lf)      ,[ReorderPoint]#(lf)      ,[ListPrice]#(lf)      ,[Size]#(lf)      ,[SizeRange]#(lf)      ,[Weight]#(lf)      ,[DaysToManufacture]#(lf)      ,[ProductLine]#(lf)      ,[DealerPrice]#(lf)      ,[Class]#(lf)      ,[Style]#(lf)      ,[ModelName]#(lf)      ,[LargePhoto]#(lf)      ,[EnglishDescription]#(lf)      ,[StartDate]#(lf)      ,[EndDate]#(lf)      ,[Status]#(lf)  FROM [dbo].[DimProduct]\", CreateNavigationProperties=false]),",
                 "    #\"Change to Currency\" = Table.TransformColumnTypes(Source,{{\"DealerPrice\", Currency.Type}}),",
-                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Change to Currency\",{\"ThaiDescription\", \"JapaneseDescription\"})",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Change to Currency\", \"SKU Type\", each ",
+                "Text.BeforeDelimiter([ProductAlternateKey],\"-\",1)",
+                "    ),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Added Custom\", each true),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Filtered Rows\",null,\"N/A\",Replacer.ReplaceValue,{\"Style\"})",
                 "in",
-                "    #\"Removed Columns\""
+                "    #\"Replaced Value\""
               ],
               "type": "m"
             }
@@ -1286,6 +1199,145 @@
               "expression": [
                 "let",
                 "    Source = Sql.Database(\".\", \"AdventureWorksDW2019\", [Query=\"SELECT [SalesTerritoryKey]#(lf)      ,[SalesTerritoryAlternateKey]#(lf)      ,[SalesTerritoryRegion]#(lf)      ,[SalesTerritoryCountry]#(lf)      ,[SalesTerritoryGroup]#(lf)      ,[SalesTerritoryImage]#(lf)  FROM [dbo].[DimSalesTerritory]\", CreateNavigationProperties=false])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Product Category Lookup",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ProductCategoryKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isNullable": false,
+            "lineageTag": "42fc53e2-3126-4b95-a482-5d22e39bf768",
+            "sourceColumn": "ProductCategoryKey",
+            "sourceProviderType": "int",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "CategoryName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isNullable": false,
+            "lineageTag": "83d34ccc-58ea-4eda-a670-beaa453d80db",
+            "sourceColumn": "CategoryName",
+            "sourceProviderType": "nvarchar(50)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ea63aa7e-c557-4d25-b46b-b5752aa12a52",
+        "partitions": [
+          {
+            "name": "Product Category Lookup",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\".\", \"AdventureWorksDW2019\", [Query=\"SELECT [ProductCategoryKey]#(lf)      ,[EnglishProductCategoryName] as [CategoryName]#(lf)  FROM [AdventureWorksDW2019].[dbo].[DimProductCategory]\", CreateNavigationProperties=false])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Product Subcategory Lookup",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ProductSubcategoryKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isNullable": false,
+            "lineageTag": "d6742f97-7212-477e-a88d-65854e461541",
+            "sourceColumn": "ProductSubcategoryKey",
+            "sourceProviderType": "int",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "SubcategoryName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isNullable": false,
+            "lineageTag": "7de1a814-4bc7-4f6b-bdee-f7869cee7e4b",
+            "sourceColumn": "SubcategoryName",
+            "sourceProviderType": "nvarchar(50)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProductCategoryKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6f5b81aa-8962-416a-a515-a34e4a003764",
+            "sourceColumn": "ProductCategoryKey",
+            "sourceProviderType": "int",
+            "summarizeBy": "count"
+          }
+        ],
+        "lineageTag": "386fe30e-6c1b-499b-9214-976de88c305c",
+        "partitions": [
+          {
+            "name": "Product Subcategory Lookup",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\".\", \"AdventureWorksDW2019\", [Query=\"SELECT [ProductSubcategoryKey]#(lf)      ,[EnglishProductSubcategoryName] as [SubcategoryName]#(lf)      ,[ProductCategoryKey]#(lf)  FROM [AdventureWorksDW2019].[dbo].[DimProductSubcategory]\", CreateNavigationProperties=false])",
                 "in",
                 "    Source"
               ],
