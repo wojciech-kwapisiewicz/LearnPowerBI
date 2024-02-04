@@ -82,10 +82,10 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Date"
+            "value": "Text"
           }
         ],
-        "expression": "#date(2023, 10, 1) meta [IsParameterQuery=true, Type=\"Date\", IsParameterQueryRequired=true]",
+        "expression": "\"2013-11-10\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
         "kind": "m",
         "lineageTag": "fc440b33-5892-4e08-9abd-b58e7d63b7cd",
         "queryGroup": "Parameters"
@@ -1684,7 +1684,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(CurrentServer, CurrentDatabase, [Query=\"SELECT TOP (100) [CustomerKey]#(lf)      ,[GeographyKey]#(lf)      ,[CustomerAlternateKey]#(lf)      ,[Title]#(lf)      ,[FirstName]#(lf)      ,[LastName]#(lf)      ,[BirthDate]#(lf)      ,[MaritalStatus]#(lf)      ,[Gender]#(lf)      ,[EmailAddress]#(lf)      ,[YearlyIncome]#(lf)      ,[TotalChildren]#(lf)      ,[EnglishEducation]#(lf)      ,[EnglishOccupation]#(lf)      ,[HouseOwnerFlag]#(lf)  FROM [dbo].[DimCustomer]\", CreateNavigationProperties=false])",
+                "    Source = Sql.Database(CurrentServer, CurrentDatabase, [Query=\"SELECT [CustomerKey]#(lf)      ,[GeographyKey]#(lf)      ,[CustomerAlternateKey]#(lf)      ,[Title]#(lf)      ,[FirstName]#(lf)      ,[LastName]#(lf)      ,[BirthDate]#(lf)      ,[MaritalStatus]#(lf)      ,[Gender]#(lf)      ,[EmailAddress]#(lf)      ,[YearlyIncome]#(lf)      ,[TotalChildren]#(lf)      ,[EnglishEducation]#(lf)      ,[EnglishOccupation]#(lf)      ,[HouseOwnerFlag]#(lf)  FROM [dbo].[DimCustomer]\", CreateNavigationProperties=false])",
                 "in",
                 "    Source"
               ],
@@ -1942,7 +1942,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(CurrentServer, CurrentDatabase, [Query=\"SELECT TOP (100) [CustomerKey]#(lf)      ,[GeographyKey]#(lf)      ,[CustomerAlternateKey]#(lf)      ,[Title]#(lf)      ,[FirstName]#(lf)      ,[LastName]#(lf)      ,[BirthDate]#(lf)      ,[MaritalStatus]#(lf)      ,[Gender]#(lf)      ,[EmailAddress]#(lf)      ,[YearlyIncome]#(lf)      ,[TotalChildren]#(lf)      ,[EnglishEducation]#(lf)      ,[EnglishOccupation]#(lf)      ,[HouseOwnerFlag]#(lf)  FROM [dbo].[DimCustomer]\", CreateNavigationProperties=false]),",
+                "    Source = Sql.Database(CurrentServer, CurrentDatabase, [Query=\"SELECT [CustomerKey]#(lf)      ,[GeographyKey]#(lf)      ,[CustomerAlternateKey]#(lf)      ,[Title]#(lf)      ,[FirstName]#(lf)      ,[LastName]#(lf)      ,[BirthDate]#(lf)      ,[MaritalStatus]#(lf)      ,[Gender]#(lf)      ,[EmailAddress]#(lf)      ,[YearlyIncome]#(lf)      ,[TotalChildren]#(lf)      ,[EnglishEducation]#(lf)      ,[EnglishOccupation]#(lf)      ,[HouseOwnerFlag]#(lf)  FROM [dbo].[DimCustomer]\", CreateNavigationProperties=false]),",
                 "    #\"Inserted Text After Delimiter\" = Table.AddColumn(Source, \"Domain\", each Text.AfterDelimiter([EmailAddress], \"@\"), type text),",
                 "    #\"Extracted Text Before Delimiter\" = Table.TransformColumns(#\"Inserted Text After Delimiter\", {{\"Domain\", each Text.BeforeDelimiter(_, \".com\", {0, RelativePosition.FromEnd}), type text}}),",
                 "    #\"Capitalized Each Word\" = Table.TransformColumns(#\"Extracted Text Before Delimiter\",{{\"Domain\", Text.Proper, type text}}),",
@@ -2311,10 +2311,10 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = #date(2022, 1, 1),",
+                "    Source = Date.FromText(SalesMinimumDate),",
                 "    ToListOfDatesSinceSourceDate = List.Dates(",
                 "    Source,",
-                "    Number.From(DateTime.LocalNow())-Number.From(Source),",
+                "    Number.From(#date(2014,02,01))-Number.From(Source),",
                 "    #duration(1,0,0,0)",
                 "),",
                 "    #\"Converted to Table\" = Table.FromList(ToListOfDatesSinceSourceDate, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
@@ -3408,7 +3408,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(CurrentServer, CurrentDatabase, [Query=\"SELECT [ProductKey]#(lf)      ,[OrderDateKey]#(lf)      ,[DueDateKey]#(lf)      ,[ShipDateKey]#(lf)      ,[CustomerKey]#(lf)      ,[PromotionKey]#(lf)      ,[CurrencyKey]#(lf)      ,[SalesTerritoryKey]#(lf)      ,[SalesOrderNumber]#(lf)      ,[SalesOrderLineNumber]#(lf)      ,[RevisionNumber]#(lf)      ,[OrderQuantity]#(lf)      ,[UnitPrice]#(lf)      ,[ExtendedAmount]#(lf)      ,[UnitPriceDiscountPct]#(lf)      ,[DiscountAmount]#(lf)      ,[ProductStandardCost]#(lf)      ,[TotalProductCost]#(lf)      ,[SalesAmount]#(lf)      ,[TaxAmt]#(lf)      ,[Freight]#(lf)      ,[CarrierTrackingNumber]#(lf)      ,[CustomerPONumber]#(lf)      ,[OrderDate]#(lf)      ,[DueDate]#(lf)      ,[ShipDate]#(lf)  FROM [dbo].[FactInternetSales]#(lf)  WHERE [OrderDate] >= '2013-10-01'\", CreateNavigationProperties=false])",
+                "    Source = Sql.Database(CurrentServer, CurrentDatabase, [Query=\"SELECT [ProductKey]#(lf)      ,[OrderDateKey]#(lf)      ,[DueDateKey]#(lf)      ,[ShipDateKey]#(lf)      ,[CustomerKey]#(lf)      ,[PromotionKey]#(lf)      ,[CurrencyKey]#(lf)      ,[SalesTerritoryKey]#(lf)      ,[SalesOrderNumber]#(lf)      ,[SalesOrderLineNumber]#(lf)      ,[RevisionNumber]#(lf)      ,[OrderQuantity]#(lf)      ,[UnitPrice]#(lf)      ,[ExtendedAmount]#(lf)      ,[UnitPriceDiscountPct]#(lf)      ,[DiscountAmount]#(lf)      ,[ProductStandardCost]#(lf)      ,[TotalProductCost]#(lf)      ,[SalesAmount]#(lf)      ,[TaxAmt]#(lf)      ,[Freight]#(lf)      ,[CarrierTrackingNumber]#(lf)      ,[CustomerPONumber]#(lf)      ,[OrderDate]#(lf)      ,[DueDate]#(lf)      ,[ShipDate]#(lf)  FROM [dbo].[FactInternetSales]#(lf)  WHERE [OrderDate] >= '\"&SalesMinimumDate&\"'\", CreateNavigationProperties=false])",
                 "in",
                 "    Source"
               ],
@@ -3863,7 +3863,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(CurrentServer, CurrentDatabase, [Query=\"SELECT [ProductKey]#(lf)      ,[OrderDateKey]#(lf)      ,[DueDateKey]#(lf)      ,[ShipDateKey]#(lf)      ,[ResellerKey] as [CustomerKey]--,[EmployeeKey]#(lf)      ,[PromotionKey]#(lf)      ,[CurrencyKey]#(lf)      ,[SalesTerritoryKey]#(lf)      ,[SalesOrderNumber]#(lf)      ,[SalesOrderLineNumber]#(lf)      ,[RevisionNumber]#(lf)      ,[OrderQuantity]#(lf)      ,[UnitPrice]#(lf)      ,[ExtendedAmount]#(lf)      ,[UnitPriceDiscountPct]#(lf)      ,[DiscountAmount]#(lf)      ,[ProductStandardCost]#(lf)      ,[TotalProductCost]#(lf)      ,[SalesAmount]#(lf)      ,[TaxAmt]#(lf)      ,[Freight]#(lf)      ,[CarrierTrackingNumber]#(lf)      ,[CustomerPONumber]#(lf)      ,[OrderDate]#(lf)      ,[DueDate]#(lf)      ,[ShipDate]#(lf)  FROM [dbo].[FactResellerSales]#(lf)  WHERE [OrderDate] >= '2013-10-01'\", CreateNavigationProperties=false])",
+                "    Source = Sql.Database(CurrentServer, CurrentDatabase, [Query=\"SELECT [ProductKey]#(lf)      ,[OrderDateKey]#(lf)      ,[DueDateKey]#(lf)      ,[ShipDateKey]#(lf)      ,[ResellerKey] as [CustomerKey]--,[EmployeeKey]#(lf)      ,[PromotionKey]#(lf)      ,[CurrencyKey]#(lf)      ,[SalesTerritoryKey]#(lf)      ,[SalesOrderNumber]#(lf)      ,[SalesOrderLineNumber]#(lf)      ,[RevisionNumber]#(lf)      ,[OrderQuantity]#(lf)      ,[UnitPrice]#(lf)      ,[ExtendedAmount]#(lf)      ,[UnitPriceDiscountPct]#(lf)      ,[DiscountAmount]#(lf)      ,[ProductStandardCost]#(lf)      ,[TotalProductCost]#(lf)      ,[SalesAmount]#(lf)      ,[TaxAmt]#(lf)      ,[Freight]#(lf)      ,[CarrierTrackingNumber]#(lf)      ,[CustomerPONumber]#(lf)      ,[OrderDate]#(lf)      ,[DueDate]#(lf)      ,[ShipDate]#(lf)  FROM [dbo].[FactResellerSales]#(lf)  WHERE [OrderDate] >= '\"&SalesMinimumDate&\"'\", CreateNavigationProperties=false])",
                 "in",
                 "    Source"
               ],

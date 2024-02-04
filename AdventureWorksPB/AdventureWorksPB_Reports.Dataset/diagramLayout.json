@@ -101,8 +101,8 @@
         },
         {
           "location": {
-            "x": 1988,
-            "y": 0
+            "x": 356.39231899999982,
+            "y": 455.29117700000006
           },
           "nodeIndex": "Internet Sales",
           "nodeLineageTag": "ae668abf-a312-483c-b659-989e1afbecbf",
@@ -114,8 +114,8 @@
         },
         {
           "location": {
-            "x": 2272,
-            "y": 0
+            "x": 649.25011048406168,
+            "y": 460.60586000000012
           },
           "nodeIndex": "Reseller Sales",
           "nodeLineageTag": "939d6717-18fb-43f8-a940-ee9c4068f11d",
@@ -127,7 +127,7 @@
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 56.447393005377734,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
