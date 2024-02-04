@@ -98,6 +98,32 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988,
+            "y": 0
+          },
+          "nodeIndex": "Internet Sales",
+          "nodeLineageTag": "ae668abf-a312-483c-b659-989e1afbecbf",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2272,
+            "y": 0
+          },
+          "nodeIndex": "Reseller Sales",
+          "nodeLineageTag": "939d6717-18fb-43f8-a940-ee9c4068f11d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
