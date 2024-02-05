@@ -1,5 +1,5 @@
 {
-  "compatibilityLevel": 1550,
+  "compatibilityLevel": 1567,
   "model": {
     "annotations": [
       {
@@ -309,8 +309,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "lineageTag": "96ee21c5-c126-46ba-9c5e-da6e5b01cfae",
             "sourceColumn": "ProductSubcategoryKey",
             "summarizeBy": "none"
@@ -1515,8 +1521,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "lineageTag": "6f5b81aa-8962-416a-a515-a34e4a003764",
             "sourceColumn": "ProductCategoryKey",
             "sourceProviderType": "int",
@@ -2808,6 +2820,11 @@
             "value": "Table"
           }
         ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
         "columns": [
           {
             "name": "ProductKey",
@@ -2817,8 +2834,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "85df5edd-6083-4fe3-89fd-84a68c88b2be",
             "sourceColumn": "ProductKey",
@@ -2833,8 +2856,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "102b25a4-96d3-4016-b91f-a69c52d2287b",
             "sourceColumn": "OrderDateKey",
@@ -2849,8 +2878,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "259e58e9-b2ca-4310-b7f5-a10b58ff4630",
             "sourceColumn": "DueDateKey",
@@ -2865,8 +2900,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "2cc9d6c7-bead-46ed-8c62-02f697ef4602",
             "sourceColumn": "ShipDateKey",
@@ -2881,8 +2922,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "12c438e2-c2fd-4560-8d79-0ae122030c14",
             "sourceColumn": "CustomerKey",
@@ -2897,8 +2944,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "b64c0111-8f9a-47e7-8ab9-be5397e36fa7",
             "sourceColumn": "PromotionKey",
@@ -2913,8 +2966,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "92aa0147-8a9a-47f4-b05e-fb300809e2eb",
             "sourceColumn": "CurrencyKey",
@@ -2929,8 +2988,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "2d42ea3b-6914-4b33-a0c4-142bb049215d",
             "sourceColumn": "SalesTerritoryKey",
@@ -2945,7 +3010,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "cb8241a8-278c-4cec-9202-a4f6a096943c",
             "sourceColumn": "SalesOrderNumber",
@@ -2960,8 +3031,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "a0ba78f2-63f6-42b5-8587-b9e65bc49072",
             "sourceColumn": "SalesOrderLineNumber",
@@ -2976,8 +3053,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "94282513-fa7f-4d80-af36-62e79fcafdaf",
             "sourceColumn": "RevisionNumber",
@@ -2992,8 +3075,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "a0102ee0-112b-42ac-a477-726eabfcce85",
             "sourceColumn": "OrderQuantity",
@@ -3012,7 +3101,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "1f68f841-b70c-42a6-a508-003700d51f3a",
             "sourceColumn": "UnitPrice",
@@ -3031,7 +3126,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "d696847c-ae61-4d86-b478-48965f3fcf45",
             "sourceColumn": "ExtendedAmount",
@@ -3050,7 +3151,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "f2957868-465a-4abd-aec4-2c35c3985004",
             "sourceColumn": "UnitPriceDiscountPct",
@@ -3069,7 +3176,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "21f524ea-6ff1-4fd6-b866-0c7454360632",
             "sourceColumn": "DiscountAmount",
@@ -3088,7 +3201,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "35eb8c58-fa2d-476e-859a-0b7ab815c2ce",
             "sourceColumn": "ProductStandardCost",
@@ -3107,7 +3226,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "ef4d8d77-eb36-426e-8b9c-2bc70e0a8224",
             "sourceColumn": "TotalProductCost",
@@ -3126,7 +3251,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "f6e14012-6294-442b-a9a4-3ac82b7b03d1",
             "sourceColumn": "SalesAmount",
@@ -3145,7 +3276,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "c77039e3-436f-4bcf-95bf-0294664db787",
             "sourceColumn": "TaxAmt",
@@ -3164,7 +3301,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "1b7e21a8-5084-4cd7-9d44-e7d1581f4d5b",
             "sourceColumn": "Freight",
@@ -3179,7 +3322,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "88ccd34b-030f-40df-a1f6-e6b96e9025b8",
             "sourceColumn": "CarrierTrackingNumber",
             "sourceProviderType": "nvarchar(25)",
@@ -3193,7 +3342,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "870d8903-ff6f-44e0-8395-e95e3943dd3e",
             "sourceColumn": "CustomerPONumber",
             "sourceProviderType": "nvarchar(25)",
@@ -3207,8 +3362,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "dateTime",
             "formatString": "General Date",
+            "isHidden": true,
             "lineageTag": "3a7fed7a-a56d-4b42-bf90-176130411612",
             "sourceColumn": "OrderDate",
             "sourceProviderType": "datetime",
@@ -3233,8 +3394,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "dateTime",
             "formatString": "General Date",
+            "isHidden": true,
             "lineageTag": "3cfbfd08-2f13-44f9-92a6-3ae826fe5df4",
             "sourceColumn": "DueDate",
             "sourceProviderType": "datetime",
@@ -3259,8 +3426,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "dateTime",
             "formatString": "General Date",
+            "isHidden": true,
             "lineageTag": "00c20e93-5163-45c7-85f9-2d88ad48b01f",
             "sourceColumn": "ShipDate",
             "sourceProviderType": "datetime",
@@ -3278,6 +3451,7 @@
             ]
           }
         ],
+        "isHidden": true,
         "lineageTag": "ae668abf-a312-483c-b659-989e1afbecbf",
         "partitions": [
           {
@@ -3303,6 +3477,11 @@
             "value": "Table"
           }
         ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
         "columns": [
           {
             "name": "ProductKey",
@@ -3312,8 +3491,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "e3de920f-dab6-4dee-988f-cb1f24077c37",
             "sourceColumn": "ProductKey",
@@ -3328,8 +3513,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "e60f0943-7faf-4557-863e-1314f6e4c510",
             "sourceColumn": "OrderDateKey",
@@ -3344,8 +3535,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "a2d3a642-40cd-4a3f-be2e-2feb1407b323",
             "sourceColumn": "DueDateKey",
@@ -3360,8 +3557,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "e99c01fc-a9aa-42fd-9672-996d5455108f",
             "sourceColumn": "ShipDateKey",
@@ -3376,8 +3579,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "f4910973-13f8-40a1-a50b-98c32587aaf2",
             "sourceColumn": "CustomerKey",
@@ -3392,8 +3601,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "f50d8dfa-5936-4eed-aa07-8436c005c462",
             "sourceColumn": "PromotionKey",
@@ -3408,8 +3623,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "17c4e190-3ac4-4a66-bfdb-8fbfe947ad27",
             "sourceColumn": "CurrencyKey",
@@ -3424,8 +3645,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "87e1e6f1-7ebb-41f5-a273-70c3b2dbdd03",
             "sourceColumn": "SalesTerritoryKey",
@@ -3440,7 +3667,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "502d0870-b5d2-47a0-9be3-ae0f356c6106",
             "sourceColumn": "SalesOrderNumber",
@@ -3455,8 +3688,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "isNullable": false,
             "lineageTag": "882e10fd-71b5-46b5-afe8-1dc754cfc08f",
             "sourceColumn": "SalesOrderLineNumber",
@@ -3471,8 +3710,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "lineageTag": "f6d551c2-97f7-475d-ba65-747adbc52a5f",
             "sourceColumn": "RevisionNumber",
             "sourceProviderType": "tinyint",
@@ -3486,8 +3731,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "lineageTag": "0d0e3863-a5ad-4bd5-8073-ef0ce2f646dc",
             "sourceColumn": "OrderQuantity",
             "sourceProviderType": "smallint",
@@ -3505,7 +3756,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "a70e299e-3120-416f-9b14-b1ec7e73252c",
             "sourceColumn": "UnitPrice",
             "sourceProviderType": "money",
@@ -3523,7 +3780,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "19a6dc49-db33-4843-a072-b592f6c74864",
             "sourceColumn": "ExtendedAmount",
             "sourceProviderType": "money",
@@ -3541,7 +3804,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "0b1275d1-c7a5-4ad9-98fd-9824a4de4836",
             "sourceColumn": "UnitPriceDiscountPct",
             "sourceProviderType": "float",
@@ -3559,7 +3828,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "15cb24a8-9012-4566-9501-e1d30828f07b",
             "sourceColumn": "DiscountAmount",
             "sourceProviderType": "float",
@@ -3577,7 +3852,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "d116bb42-9c92-4b67-8bfc-eba8241cb499",
             "sourceColumn": "ProductStandardCost",
             "sourceProviderType": "money",
@@ -3595,7 +3876,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "2d851dd2-c4f8-4258-b89e-ff66352b3e8b",
             "sourceColumn": "TotalProductCost",
             "sourceProviderType": "money",
@@ -3613,7 +3900,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "dfa90cce-25c4-4079-9ecf-7ff15a3ad4a2",
             "sourceColumn": "SalesAmount",
             "sourceProviderType": "money",
@@ -3631,7 +3924,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "565dfe45-bf76-46d6-8161-b6852f7cb0c8",
             "sourceColumn": "TaxAmt",
             "sourceProviderType": "money",
@@ -3649,7 +3948,13 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "double",
+            "isHidden": true,
             "lineageTag": "c4c9e255-1a17-4c0f-884f-7968456b80f4",
             "sourceColumn": "Freight",
             "sourceProviderType": "money",
@@ -3663,7 +3968,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "ea469a46-5242-403a-9498-2417ed1b9a96",
             "sourceColumn": "CarrierTrackingNumber",
             "sourceProviderType": "nvarchar(25)",
@@ -3677,7 +3988,13 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "851deeb9-5e3b-4181-a3b9-0a6c9a5da9ed",
             "sourceColumn": "CustomerPONumber",
             "sourceProviderType": "nvarchar(25)",
@@ -3691,8 +4008,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "dateTime",
             "formatString": "General Date",
+            "isHidden": true,
             "lineageTag": "e321e6eb-0ba8-4768-b67f-0ede19c75294",
             "sourceColumn": "OrderDate",
             "sourceProviderType": "datetime",
@@ -3717,8 +4040,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "dateTime",
             "formatString": "General Date",
+            "isHidden": true,
             "lineageTag": "f9c83404-a511-4bd8-b15d-a356f3d5e6e5",
             "sourceColumn": "DueDate",
             "sourceProviderType": "datetime",
@@ -3743,8 +4072,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "dateTime",
             "formatString": "General Date",
+            "isHidden": true,
             "lineageTag": "8a24a400-bfe8-4db8-b568-dca937fe0f76",
             "sourceColumn": "ShipDate",
             "sourceProviderType": "datetime",
@@ -3762,6 +4097,7 @@
             ]
           }
         ],
+        "isHidden": true,
         "lineageTag": "939d6717-18fb-43f8-a940-ee9c4068f11d",
         "partitions": [
           {
@@ -5036,8 +5372,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "lineageTag": "552ffa8b-1ff5-4214-98bd-b03a86fa61c8",
             "sourceColumn": "ProductKey",
             "summarizeBy": "none"
@@ -5092,8 +5434,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "lineageTag": "0431b7e2-2523-405b-bd26-d7fea9afeb4c",
             "sourceColumn": "CustomerKey",
             "summarizeBy": "none"
@@ -5134,8 +5482,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "int64",
             "formatString": "0",
+            "isHidden": true,
             "lineageTag": "e7977dad-e8f8-4f28-8bee-160e99b6d9b9",
             "sourceColumn": "SalesTerritoryKey",
             "summarizeBy": "none"
@@ -5388,8 +5742,14 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
             "dataType": "dateTime",
             "formatString": "General Date",
+            "isHidden": true,
             "lineageTag": "3be0418e-bc71-4c7b-a6f2-ed592369a4ff",
             "sourceColumn": "OrderDate",
             "summarizeBy": "none"
