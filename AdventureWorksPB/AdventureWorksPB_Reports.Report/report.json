@@ -25,7 +25,17 @@
       "filters": "[]",
       "height": 720.00,
       "name": "ReportSection",
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2374340800293392699a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.678391959798994,\"y\":0,\"z\":0,\"width\":574.0703517587939,\"height\":418.49246231155774,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Total Sales.OrderQuantity)\"}],\"Rows\":[{\"queryRef\":\"Product Category Lookup.CategoryName\",\"active\":true},{\"queryRef\":\"Product Lookup.EnglishProductName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total Sales\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Product Lookup\",\"Type\":0},{\"Name\":\"p1\",\"Entity\":\"Product Category Lookup\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"OrderQuantity\"}},\"Function\":0},\"Name\":\"Sum(Total Sales.OrderQuantity)\",\"NativeReferenceName\":\"Sum of OrderQuantity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"EnglishProductName\"},\"Name\":\"Product Lookup.EnglishProductName\",\"NativeReferenceName\":\"EnglishProductName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p1\"}},\"Property\":\"CategoryName\"},\"Name\":\"Product Category Lookup.CategoryName\",\"NativeReferenceName\":\"CategoryName\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Product Category Lookup.CategoryName\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Product Category Lookup\"}},\"Property\":\"CategoryName\"}}],\"isPinned\":true},{\"queryRefs\":[\"Product Lookup.EnglishProductName\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Accessories'\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 418.49,
+          "width": 574.07,
+          "x": 15.68,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
       "width": 1280.00
     }
   ]
