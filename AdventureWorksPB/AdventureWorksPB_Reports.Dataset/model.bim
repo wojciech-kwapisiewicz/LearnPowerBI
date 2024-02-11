@@ -51,7 +51,7 @@
             "value": "Text"
           }
         ],
-        "expression": "\"AdventureWorksDW2019\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "expression": "\"AdventureWorksDW2022\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
         "kind": "m",
         "lineageTag": "d3368362-9e0a-417d-ab39-f75e77578a5b",
         "queryGroup": "Parameters"
