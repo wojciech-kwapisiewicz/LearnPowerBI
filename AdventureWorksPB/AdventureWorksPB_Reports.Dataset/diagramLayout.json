@@ -124,6 +124,32 @@
             "width": 234
           },
           "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1538.1443470000004,
+            "y": 399.16537
+          },
+          "nodeIndex": "DateOffsetVerification",
+          "nodeLineageTag": "cd2ed135-b6ea-4a96-8d0a-54f624d2d278",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1822.1443470000004,
+            "y": 351.16537
+          },
+          "nodeIndex": "Returns Data",
+          "nodeLineageTag": "005bb92b-6f81-4a44-93c3-d9c03c31ed2d",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
