@@ -10,16 +10,16 @@
       "nodes": [
         {
           "location": {
-            "x": 911.27713600000016,
-            "y": 235.13978399999996
+            "x": 892.50733245344873,
+            "y": 149.86261099642837
           },
           "nodeIndex": "Product Lookup",
           "nodeLineageTag": "8b3e7ffb-fbaa-450a-87f6-835000331cc1",
           "size": {
-            "height": 300,
-            "width": 234
+            "height": 216.736633,
+            "width": 257.03029300000003
           },
-          "zIndex": 7
+          "zIndex": 11
         },
         {
           "location": {
@@ -32,7 +32,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 1
         },
         {
           "location": {
@@ -43,14 +43,14 @@
           "nodeLineageTag": "ea63aa7e-c557-4d25-b46b-b5752aa12a52",
           "size": {
             "height": 128,
-            "width": 271.20278099999996
+            "width": 249.94404899999995
           },
-          "zIndex": 4
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1206.3122000000005,
-            "y": 113.37990399999997
+            "x": 1243.5149810000005,
+            "y": 116.92302599999998
           },
           "nodeIndex": "Product Subcategory Lookup",
           "nodeLineageTag": "386fe30e-6c1b-499b-9214-976de88c305c",
@@ -58,7 +58,7 @@
             "height": 152,
             "width": 281.83214699999985
           },
-          "zIndex": 5
+          "zIndex": 4
         },
         {
           "location": {
@@ -71,7 +71,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 2
         },
         {
           "location": {
@@ -84,12 +84,12 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 942.77900999999963,
-            "y": 602.33074
+            "x": 790.42476399999975,
+            "y": 751.14186399999994
           },
           "nodeIndex": "Internet Sales",
           "nodeLineageTag": "ae668abf-a312-483c-b659-989e1afbecbf",
@@ -97,12 +97,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 10
         },
         {
           "location": {
-            "x": 287.85166648406175,
-            "y": 572.21420300000011
+            "x": 535.87020648406167,
+            "y": 749.370303
           },
           "nodeIndex": "Reseller Sales",
           "nodeLineageTag": "939d6717-18fb-43f8-a940-ee9c4068f11d",
@@ -110,25 +110,25 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 612.08673599999986,
-            "y": 352.68971100000022
+            "x": 293.20575600000012,
+            "y": 489.09990800000014
           },
           "nodeIndex": "Total Sales",
           "nodeLineageTag": "0cc9fb78-4055-47ec-bf18-ebe2bdec8b88",
           "size": {
-            "height": 300,
+            "height": 206.10726700000009,
             "width": 234
           },
-          "zIndex": 9
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 1538.1443470000004,
-            "y": 399.16537
+            "x": 250.70460031922767,
+            "y": 842.32596767537041
           },
           "nodeIndex": "DateOffsetVerification",
           "nodeLineageTag": "cd2ed135-b6ea-4a96-8d0a-54f624d2d278",
@@ -136,12 +136,12 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 8
         },
         {
           "location": {
-            "x": 1822.1443470000004,
-            "y": 351.16537
+            "x": 759.1961624405136,
+            "y": 492.07830145702019
           },
           "nodeIndex": "Returns Data",
           "nodeLineageTag": "005bb92b-6f81-4a44-93c3-d9c03c31ed2d",
@@ -149,11 +149,11 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 9
         }
       ],
       "name": "All tables",
-      "zoomValue": 56.447393005377755,
+      "zoomValue": 56.447393005377776,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
