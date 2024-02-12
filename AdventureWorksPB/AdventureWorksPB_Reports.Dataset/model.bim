@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Territory Lookup\",\"Product Lookup\",\"Product Category Lookup\",\"Product Subcategory Lookup\",\"Customer Lookup\",\"Calendar\",\"Internet Sales\",\"Reseller Sales\",\"CurrentDatabase\",\"CurrentServer\",\"SalesMinimumDate\",\"Total Sales\",\"Returns Data\",\"CsvDayOffset\",\"DateOffsetVerification\"]"
+        "value": "[\"Territory Lookup\",\"Product Lookup\",\"Product Category Lookup\",\"Product Subcategory Lookup\",\"Customer Lookup\",\"Calendar\",\"Internet Sales\",\"Reseller Sales\",\"CurrentDatabase\",\"CurrentServer\",\"SalesMinimumDate\",\"Total Sales\",\"Returns Data\",\"CsvDayOffset\",\"DateOffsetVerification\",\"Measure Table\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -1873,6 +1873,73 @@
             "lineageTag": "a90d3680-ad37-4dfc-883e-523552d36a10",
             "sourceColumn": "Domain",
             "summarizeBy": "none"
+          },
+          {
+            "name": "Priority Customer",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "IF(",
+              "    'Customer Lookup'[YearlyIncome] > 100000 && 'Customer Lookup'[TotalChildren] > 0,",
+              "    \"Priority\",",
+              "    \"Standard\"",
+              ")"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "650c206b-926b-4d75-bd22-74463051f009",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Income Level",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "IF('Customer Lookup'[YearlyIncome] > 150000, \"Very High\",",
+              "IF('Customer Lookup'[YearlyIncome] > 100000, \"High\",",
+              "IF('Customer Lookup'[YearlyIncome] > 50000, \"Average\",",
+              "\"Low\")))"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "f10a4966-7e76-47b6-8e0b-a60a4c72f856",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Education Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "SWITCH('Customer Lookup'[EnglishEducation],",
+              "\"High School\", \"High School\",",
+              "\"Partial High School\", \"High School\",",
+              "\"Bachelors\", \"Undergrad\",",
+              "\"Partial College\", \"Undergrad\",",
+              "\"Graduate Degree\", \"Graduate\",",
+              "\"Other\")"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "b1927cdf-4526-4572-89c2-f5aa32dacb35",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "fc0ce0bf-f023-406c-9873-d22cef86f976",
@@ -7518,6 +7585,123 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "Measure Table (DAX)",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "c5a2866aa78a45609b7eeaa27a6c1ea7"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "3c46a0bb-7742-4ad7-90a4-200b62c956ac",
+            "sourceColumn": "[Value]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "50b24ff8-f882-475d-be45-a91222e15f63",
+        "partitions": [
+          {
+            "name": "Measure Table (DAX)",
+            "mode": "import",
+            "source": {
+              "expression": "{\"\"}",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Measure Table",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "b83730f0-64d1-474a-859c-1a9d6a870e2c",
+        "measures": [
+          {
+            "name": "Total Customers",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "DISTINCTCOUNT('Total Sales'[CustomerKey])",
+            "lineageTag": "7519c63e-3fe7-4131-b7a0-4209c9844a9d"
+          },
+          {
+            "name": "Return Rate",
+            "expression": [
+              "",
+              "DIVIDE(",
+              "    [Quantity Returned],",
+              "    [Quantity Sold],",
+              "    \"No Sales\"",
+              ")"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "07fb1f0e-6894-47c0-97c2-6d9f9d1c3574"
+          },
+          {
+            "name": "Quantity Returned",
+            "expression": [
+              "",
+              "SUM(",
+              "    'Returns Data'[ReturnQuantity]",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "c42fe214-ff53-4ef9-a197-d678150c2038"
+          },
+          {
+            "name": "Quantity Sold",
+            "expression": [
+              "",
+              "SUM(",
+              "    'Total Sales'[OrderQuantity]",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "bd19f541-d2df-4c60-aa38-3f8fe5205ca4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Measure Table",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }
