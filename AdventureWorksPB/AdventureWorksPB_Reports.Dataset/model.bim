@@ -722,6 +722,27 @@
             "lineageTag": "90c65f31-f38e-4fb1-93f1-8eade76be163",
             "sourceColumn": "SKU Type",
             "summarizeBy": "none"
+          },
+          {
+            "name": "SKU Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "",
+              "LEFT(",
+              "    [SKU Type],",
+              "    FIND(\"-\",[SKU Type])-1",
+              ")"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "d59e0f04-8884-4f20-9b9a-32756e1e9305",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "8b3e7ffb-fbaa-450a-87f6-835000331cc1",
@@ -2428,6 +2449,21 @@
             "lineageTag": "d68aca16-35be-48ce-bf9e-dd3daaa0e1e2",
             "sourceColumn": "Day",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "Month Abbr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "UPPER(LEFT([Month Name],3))",
+            "isDataTypeInferred": true,
+            "lineageTag": "ac2ef419-c7b0-4fbf-ad45-490708b3467b",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "hierarchies": [
