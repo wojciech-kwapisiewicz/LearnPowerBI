@@ -43,10 +43,6 @@
         "name": "CurrentDatabase",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Text"
           }
@@ -59,10 +55,6 @@
       {
         "name": "CurrentServer",
         "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
           {
             "name": "PBI_ResultType",
             "value": "Text"
@@ -85,7 +77,7 @@
             "value": "Text"
           }
         ],
-        "expression": "\"2013-11-10\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "expression": "\"2013-01-01\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
         "kind": "m",
         "lineageTag": "fc440b33-5892-4e08-9abd-b58e7d63b7cd",
         "queryGroup": "Parameters"
@@ -2214,12 +2206,12 @@
         "name": "Calendar",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -2571,7 +2563,7 @@
                 "    Source = Date.FromText(SalesMinimumDate),",
                 "    ToListOfDatesSinceSourceDate = List.Dates(",
                 "    Source,",
-                "    Number.From(#date(2014,02,01))-Number.From(Source),",
+                "    Number.From(#date(2014,12,31))-Number.From(Source),",
                 "    #duration(1,0,0,0)",
                 "),",
                 "    #\"Converted to Table\" = Table.FromList(ToListOfDatesSinceSourceDate, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
@@ -7161,9 +7153,10 @@
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"ReturnDate\", type date}, {\"TerritoryKey\", Int64.Type}, {\"ProductKey\", Int64.Type}, {\"ReturnQuantity\", Int64.Type}}),",
                 "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Changed Type\", \"ReturnDate\", \"ReturnDate - Original\"),",
-                "    #\"Extracted Day\" = Table.TransformColumns(#\"Duplicated Column\",{{\"ReturnDate\", each Date.AddDays(_,CsvDayOffset), type date}})",
+                "    #\"Extracted Day\" = Table.TransformColumns(#\"Duplicated Column\",{{\"ReturnDate\", each Date.AddDays(_,CsvDayOffset), type date}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Extracted Day\", each [ReturnDate] > Date.FromText(SalesMinimumDate))",
                 "in",
-                "    #\"Extracted Day\""
+                "    #\"Filtered Rows\""
               ],
               "type": "m"
             }
@@ -7739,6 +7732,19 @@
             ],
             "formatString": "0",
             "lineageTag": "bd19f541-d2df-4c60-aa38-3f8fe5205ca4"
+          },
+          {
+            "name": "Return Rate for Bikes",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    [Return Rate],",
+              "    'Product Category Lookup'[CategoryName]==\"Bikes\"",
+              ")",
+              ""
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "631f96c5-2424-4858-8942-b57969d457a7"
           }
         ],
         "partitions": [
