@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"visible\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"visible\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -20,7 +20,7 @@
   "sections": [
     {
       "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"328L\"}}}}}]}}",
-      "displayName": "Page 1",
+      "displayName": "Sales",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
@@ -63,15 +63,6 @@
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"293079dc87d185092b8a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1028.75,\"y\":360,\"z\":8000,\"width\":251.25,\"height\":167.5,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Measure Table.Return Rate for Bikes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Return Rate for Bikes\"},\"Name\":\"Measure Table.Return Rate for Bikes\",\"NativeReferenceName\":\"Return Rate for Bikes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Return Rate for Bikes\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
-          "filters": "[]",
-          "height": 167.50,
-          "width": 251.25,
-          "x": 1028.75,
-          "y": 360.00,
-          "z": 8000.00
-        },
-        {
           "config": "{\"name\":\"3cc0dce2cc55d5161f3e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":653.75,\"y\":538.75,\"z\":1000,\"width\":361.25,\"height\":181.25,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Total Sales.OrderQuantity)\"}],\"Rows\":[{\"queryRef\":\"Territory Lookup.Territory Hierarchy.SalesTerritoryGroup\",\"active\":true},{\"queryRef\":\"Territory Lookup.Territory Hierarchy.SalesTerritoryCountry\"},{\"queryRef\":\"Territory Lookup.Territory Hierarchy.SalesTerritoryRegion\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Total Sales\",\"Type\":0},{\"Name\":\"t1\",\"Entity\":\"Territory Lookup\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"OrderQuantity\"}},\"Function\":0},\"Name\":\"Sum(Total Sales.OrderQuantity)\",\"NativeReferenceName\":\"Sum of OrderQuantity\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Hierarchy\":\"Territory Hierarchy\"}},\"Level\":\"SalesTerritoryGroup\"},\"Name\":\"Territory Lookup.Territory Hierarchy.SalesTerritoryGroup\",\"NativeReferenceName\":\"Territory Hierarchy SalesTerritoryGroup\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Hierarchy\":\"Territory Hierarchy\"}},\"Level\":\"SalesTerritoryCountry\"},\"Name\":\"Territory Lookup.Territory Hierarchy.SalesTerritoryCountry\",\"NativeReferenceName\":\"Territory Hierarchy SalesTerritoryCountry\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Hierarchy\":\"Territory Hierarchy\"}},\"Level\":\"SalesTerritoryRegion\"},\"Name\":\"Territory Lookup.Territory Hierarchy.SalesTerritoryRegion\",\"NativeReferenceName\":\"Territory Hierarchy SalesTerritoryRegion\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Territory Lookup.Territory Hierarchy.SalesTerritoryGroup\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Territory Lookup\"}},\"Property\":\"SalesTerritoryGroup\"}}],\"isPinned\":true},{\"queryRefs\":[\"Territory Lookup.Territory Hierarchy.SalesTerritoryCountry\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Territory Lookup\"}},\"Property\":\"SalesTerritoryCountry\"}}],\"isPinned\":true},{\"queryRefs\":[\"Territory Lookup.Territory Hierarchy.SalesTerritoryRegion\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
           "filters": "[{\"name\":\"Filterccb5a9c4ab656859644d\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Product Lookup\"}},\"Property\":\"EnglishProductName\"}},\"type\":\"Categorical\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"Filter53099c071e49b4bed147\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Product Category Lookup\"}},\"Property\":\"CategoryName\"}},\"type\":\"Categorical\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"Filterefa320f062bd6621528d\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Product Subcategory Lookup\"}},\"Property\":\"SubcategoryName\"}},\"type\":\"Categorical\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":2},{\"name\":\"Filterc6c5004d48bf59a66324\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Total Sales\"}},\"Property\":\"OrderQuantity\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":3}]",
           "height": 181.25,
@@ -90,20 +81,11 @@
           "z": 5000.00
         },
         {
-          "config": "{\"name\":\"b03dea0c660269de1d5b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1028.75,\"y\":161.25,\"z\":6000,\"width\":251.25,\"height\":198.75,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Measure Table.ReturnRate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Return Rate\"},\"Name\":\"Measure Table.ReturnRate\",\"NativeReferenceName\":\"Return Rate\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"dbbf15d562e4cca2831e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1028.7437185929648,\"y\":0,\"z\":7000,\"width\":250.8542713567839,\"height\":114.57286432160804,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Measure Table.TotalCustomers\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Customers\"},\"Name\":\"Measure Table.TotalCustomers\",\"NativeReferenceName\":\"Total Customers\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 198.75,
-          "width": 251.25,
-          "x": 1028.75,
-          "y": 161.25,
-          "z": 6000.00
-        },
-        {
-          "config": "{\"name\":\"dbbf15d562e4cca2831e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1028.75,\"y\":0,\"z\":7000,\"width\":251.25,\"height\":161.25,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Measure Table.TotalCustomers\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Customers\"},\"Name\":\"Measure Table.TotalCustomers\",\"NativeReferenceName\":\"Total Customers\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
-          "filters": "[]",
-          "height": 161.25,
-          "width": 251.25,
-          "x": 1028.75,
+          "height": 114.57,
+          "width": 250.85,
+          "x": 1028.74,
           "y": 0.00,
           "z": 7000.00
         },
@@ -121,13 +103,59 @@
     },
     {
       "config": "{}",
-      "displayName": "Page 2",
+      "displayName": "Returns",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "ReportSectionf326438e37abdb85595a",
       "ordinal": 1,
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"31c7a4797dac14b803e7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":910.5527638190954,\"y\":250.8542713567839,\"z\":4000,\"width\":369.04522613065325,\"height\":129.04522613065325,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Product Category Lookup.CategoryName\",\"active\":true}],\"Values\":[{\"queryRef\":\"Measure Table.% of All Returns\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Product Category Lookup\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CategoryName\"},\"Name\":\"Product Category Lookup.CategoryName\",\"NativeReferenceName\":\"CategoryName\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"% of All Returns\"},\"Name\":\"Measure Table.% of All Returns\",\"NativeReferenceName\":\"% of All Returns\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 129.05,
+          "width": 369.05,
+          "x": 910.55,
+          "y": 250.85,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"576f85ac2de87851657a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1028.7437185929648,\"y\":493.26633165829145,\"z\":2000,\"width\":250.8542713567839,\"height\":113.36683417085426,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Measure Table.ReturnRate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Return Rate\"},\"Name\":\"Measure Table.ReturnRate\",\"NativeReferenceName\":\"Return Rate\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 113.37,
+          "width": 250.85,
+          "x": 1028.74,
+          "y": 493.27,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"85d12d2ade0ca5944810\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1015.4773869346733,\"y\":379.89949748743715,\"z\":1000,\"width\":264.12060301507535,\"height\":113.36683417085426,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Measure Table.All Returns\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"All Returns\"},\"Name\":\"Measure Table.All Returns\",\"NativeReferenceName\":\"All Returns\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"All Returns\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 113.37,
+          "width": 264.12,
+          "x": 1015.48,
+          "y": 379.90,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d30e3e06410283065e57\",\"layouts\":[{\"id\":0,\"position\":{\"x\":910.5527638190954,\"y\":0,\"z\":0,\"width\":369.04522613065325,\"height\":155.57788944723617,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"Measure Table.All Returns\"},{\"queryRef\":\"Measure Table.% of All Returns\"},{\"queryRef\":\"Measure Table.Return Rate\"},{\"queryRef\":\"Measure Table.Return Rate for Bikes\"},{\"queryRef\":\"Measure Table.Quantity Returned\"},{\"queryRef\":\"Measure Table.Quantity Sold\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"All Returns\"},\"Name\":\"Measure Table.All Returns\",\"NativeReferenceName\":\"All Returns\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"% of All Returns\"},\"Name\":\"Measure Table.% of All Returns\",\"NativeReferenceName\":\"% of All Returns\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Return Rate\"},\"Name\":\"Measure Table.Return Rate\",\"NativeReferenceName\":\"Return Rate\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Return Rate for Bikes\"},\"Name\":\"Measure Table.Return Rate for Bikes\",\"NativeReferenceName\":\"Return Rate for Bikes\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Quantity Returned\"},\"Name\":\"Measure Table.Quantity Returned\",\"NativeReferenceName\":\"Quantity Returned\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Quantity Sold\"},\"Name\":\"Measure Table.Quantity Sold\",\"NativeReferenceName\":\"Quantity Sold\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"All Returns\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 155.58,
+          "width": 369.05,
+          "x": 910.55,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f83b8ac68e930842985c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1028.7437185929648,\"y\":606.6331658291457,\"z\":3000,\"width\":250.8542713567839,\"height\":113.36683417085426,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Measure Table.Return Rate for Bikes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Measure Table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Return Rate for Bikes\"},\"Name\":\"Measure Table.Return Rate for Bikes\",\"NativeReferenceName\":\"Return Rate for Bikes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Return Rate for Bikes\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 113.37,
+          "width": 250.85,
+          "x": 1028.74,
+          "y": 606.63,
+          "z": 3000.00
+        }
+      ],
       "width": 1280.00
     }
   ]
