@@ -7745,6 +7745,41 @@
             ],
             "formatString": "0.00%;-0.00%;0.00%",
             "lineageTag": "631f96c5-2424-4858-8942-b57969d457a7"
+          },
+          {
+            "name": "Bike Returns",
+            "expression": [
+              "",
+              "CALCULATE(    ",
+              "    --SUM('Returns Data'[ReturnQuantity]),",
+              "    [Quantity Returned],",
+              "    'Product Category Lookup'[CategoryName]==\"Bikes\"",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "50d00bc6-86b4-4110-a74d-49ee120faa73"
+          },
+          {
+            "name": "Bike Sales",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    --SUM('Total Sales'[OrderQuantity]),",
+              "    [Quantity Sold],    ",
+              "    'Product Category Lookup'[CategoryName]==\"Bikes\"",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "af56524f-25f4-402a-bee7-075f7fb0533e"
+          },
+          {
+            "name": "Return Rate for Bikes (Divide method)",
+            "expression": [
+              "",
+              "DIVIDE([Bike Returns], [Bike Sales])"
+            ],
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "95b5a1d7-a17a-4437-813a-9b1a28c036f2"
           }
         ],
         "partitions": [
