@@ -1961,6 +1961,26 @@
             "lineageTag": "b1927cdf-4526-4572-89c2-f5aa32dacb35",
             "summarizeBy": "none",
             "type": "calculated"
+          },
+          {
+            "name": "Birth Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": [
+              "",
+              "--[BirthDate].[Year]",
+              "YEAR([BirthDate])"
+            ],
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "b33cd0ea-6dcf-4cda-98b7-536a0f2423c2",
+            "summarizeBy": "sum",
+            "type": "calculated"
           }
         ],
         "lineageTag": "fc0ce0bf-f023-406c-9873-d22cef86f976",
