@@ -7810,6 +7810,41 @@
             ],
             "formatString": "0.00%;-0.00%;0.00%",
             "lineageTag": "03f13edf-3c00-4cbe-a836-c9f287ffb6a1"
+          },
+          {
+            "name": "Total Cost",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "SUMX(",
+              "    'Total Sales',",
+              "    'Total Sales'[OrderQuantity] * ",
+              "    RELATED('Product Lookup'[StandardCost])",
+              ")"
+            ],
+            "lineageTag": "a086eeb9-504c-45dc-af46-649a096511c1"
+          },
+          {
+            "name": "Total Profit",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "SUMX(",
+              "    'Total Sales',",
+              "    'Total Sales'[OrderQuantity] * RELATED('Product Lookup'[ListPrice])",
+              ") - [Total Cost]"
+            ],
+            "lineageTag": "392c983d-9d16-4873-9d64-8634ddd855c4"
           }
         ],
         "partitions": [
