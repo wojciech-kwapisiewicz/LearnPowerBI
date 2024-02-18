@@ -2476,6 +2476,21 @@
             "lineageTag": "ac2ef419-c7b0-4fbf-ad45-490708b3467b",
             "summarizeBy": "none",
             "type": "calculated"
+          },
+          {
+            "name": "DisplayText",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"YYYY-MM-DD\")",
+            "isDataTypeInferred": true,
+            "lineageTag": "5f6c5bec-9ae8-496f-89ca-2789f84d0349",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "hierarchies": [
@@ -7677,10 +7692,6 @@
         "name": "Measure Table",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Table"
           }
@@ -7845,6 +7856,82 @@
               ") - [Total Cost]"
             ],
             "lineageTag": "392c983d-9d16-4873-9d64-8634ddd855c4"
+          },
+          {
+            "name": "Prev Mth Returns",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    [Quantity Returned],",
+              "    DATEADD('Calendar'[Date],-1,MONTH)",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "a3e7ef3f-d937-44f5-876d-f763b2ac9ae6"
+          },
+          {
+            "name": "Prev Mth Orders",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    [Quantity Sold],",
+              "    DATEADD('Calendar'[Date],-1,MONTH)",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "04899e72-22f9-442f-bbea-3f569c353a9a"
+          },
+          {
+            "name": "Prev Mth Revenue",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    [Total Cost]+[Total Profit],",
+              "    DATEADD('Calendar'[Date],-1,MONTH)",
+              ")"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "46d17f5c-0ed9-48a2-a183-81db2a228f94"
+          },
+          {
+            "name": "Revenue",
+            "expression": "[Total Profit] + [Total Cost]",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "17dbc221-4ce3-42ad-af3c-3e436f12bb37"
+          },
+          {
+            "name": "Order Target",
+            "expression": [
+              "",
+              "[Prev Mth Orders] * 1.1"
+            ],
+            "formatString": "0",
+            "lineageTag": "05657b68-1bb8-4ff5-9355-2eb811133fd5"
+          },
+          {
+            "name": "Rolling profit (90days)",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    [Total Profit],",
+              "    DATESINPERIOD(",
+              "        'Calendar'[Date],",
+              "        LASTDATE(",
+              "            'Calendar'[Date]",
+              "        ),",
+              "        -90,",
+              "        DAY",
+              "    )",
+              ")",
+              ""
+            ],
+            "lineageTag": "348a7b20-372c-4b12-b204-fdee129330a8"
           }
         ],
         "partitions": [
