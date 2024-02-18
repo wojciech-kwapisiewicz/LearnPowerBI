@@ -7842,12 +7842,6 @@
           },
           {
             "name": "Total Profit",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
             "expression": [
               "",
               "SUMX(",
@@ -7855,6 +7849,7 @@
               "    'Total Sales'[OrderQuantity] * RELATED('Product Lookup'[ListPrice])",
               ") - [Total Cost]"
             ],
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
             "lineageTag": "392c983d-9d16-4873-9d64-8634ddd855c4"
           },
           {
