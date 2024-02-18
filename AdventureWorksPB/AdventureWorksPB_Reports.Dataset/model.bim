@@ -6210,6 +6210,25 @@
                 "relationship": "bba8518c-95bb-401a-a5bd-4fff81ecfd8b"
               }
             ]
+          },
+          {
+            "name": "ProfitPerOrder",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "expression": "[OrderQuantity] * (RELATED('Product Lookup'[ListPrice])-RELATED('Product Lookup'[StandardCost]))",
+            "isDataTypeInferred": true,
+            "lineageTag": "08632fc8-bba3-46f7-a966-5e7e432c74ce",
+            "summarizeBy": "sum",
+            "type": "calculated"
           }
         ],
         "lineageTag": "0cc9fb78-4055-47ec-bf18-ebe2bdec8b88",
@@ -7889,7 +7908,7 @@
             "lineageTag": "46d17f5c-0ed9-48a2-a183-81db2a228f94"
           },
           {
-            "name": "Revenue",
+            "name": "Total Revenue",
             "expression": "[Total Profit] + [Total Cost]",
             "formatString": "\\$#,0;(\\$#,0);\\$#,0",
             "lineageTag": "17dbc221-4ce3-42ad-af3c-3e436f12bb37"
@@ -7938,9 +7957,26 @@
             ],
             "expression": [
               "",
-              "[Revenue] / [Total Customers]"
+              "[Total Revenue] / [Total Customers]"
             ],
             "lineageTag": "989b2c15-5cb8-43fd-868b-bce4faaf325e"
+          },
+          {
+            "name": "Profit",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "SUM(",
+              "    'Total Sales'[ProfitPerOrder]",
+              ")",
+              ""
+            ],
+            "lineageTag": "540963a6-11c5-4b6a-a01f-49f2404ab30d"
           }
         ],
         "partitions": [
