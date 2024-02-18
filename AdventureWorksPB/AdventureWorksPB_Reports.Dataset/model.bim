@@ -7927,6 +7927,20 @@
               ""
             ],
             "lineageTag": "348a7b20-372c-4b12-b204-fdee129330a8"
+          },
+          {
+            "name": "Revenue Per Customer",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[Revenue] / [Total Customers]"
+            ],
+            "lineageTag": "989b2c15-5cb8-43fd-868b-bce4faaf325e"
           }
         ],
         "partitions": [
