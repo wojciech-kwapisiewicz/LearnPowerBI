@@ -5767,6 +5767,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -5847,7 +5851,6 @@
             ],
             "dataType": "int64",
             "formatString": "0",
-            "isHidden": true,
             "lineageTag": "0431b7e2-2523-405b-bd26-d7fea9afeb4c",
             "sourceColumn": "CustomerKey",
             "summarizeBy": "none"
@@ -5939,7 +5942,7 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
+            "dataType": "int64",
             "lineageTag": "da7e8143-f013-4550-a3a6-6fb033db5ccb",
             "sourceColumn": "RevisionNumber",
             "summarizeBy": "sum"
@@ -5956,7 +5959,7 @@
                 "value": "{\"isDecimal\":true}"
               }
             ],
-            "dataType": "double",
+            "dataType": "int64",
             "formatString": "#,0",
             "lineageTag": "3677689a-cb19-49ad-9ddd-bc3ca379f60b",
             "sourceColumn": "OrderQuantity",
@@ -6239,7 +6242,8 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Table.Combine({#\"Internet Sales\", #\"Reseller Sales\"})",
+                "    Source = Table.Combine({#\"Internet Sales\"})//, #\"Reseller Sales\"})",
+                "",
                 "in",
                 "    Source"
               ],
@@ -7977,6 +7981,17 @@
               ""
             ],
             "lineageTag": "540963a6-11c5-4b6a-a01f-49f2404ab30d"
+          },
+          {
+            "name": "Total Orders",
+            "expression": [
+              "",
+              "COUNT(",
+              "    'Total Sales'[SalesOrderNumber]",
+              "    )"
+            ],
+            "formatString": "0",
+            "lineageTag": "76e7054b-1841-4d10-9485-98e887427f96"
           }
         ],
         "partitions": [
