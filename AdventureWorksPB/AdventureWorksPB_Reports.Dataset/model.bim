@@ -1656,6 +1656,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -1973,6 +1977,19 @@
             "lineageTag": "b33cd0ea-6dcf-4cda-98b7-536a0f2423c2",
             "summarizeBy": "sum",
             "type": "calculated"
+          },
+          {
+            "name": "FullName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "08d54565-3b84-4fb6-aa09-c50d707366b2",
+            "sourceColumn": "FullName",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "fc0ce0bf-f023-406c-9873-d22cef86f976",
@@ -1987,9 +2004,10 @@
                 "    #\"Inserted Text After Delimiter\" = Table.AddColumn(Source, \"Domain\", each Text.AfterDelimiter([EmailAddress], \"@\"), type text),",
                 "    #\"Extracted Text Before Delimiter\" = Table.TransformColumns(#\"Inserted Text After Delimiter\", {{\"Domain\", each Text.BeforeDelimiter(_, \".com\", {0, RelativePosition.FromEnd}), type text}}),",
                 "    #\"Capitalized Each Word\" = Table.TransformColumns(#\"Extracted Text Before Delimiter\",{{\"Domain\", Text.Proper, type text}}),",
-                "    #\"Replace Value\" = Table.ReplaceValue(#\"Capitalized Each Word\",\"-\",\" \",Replacer.ReplaceText,{\"Domain\"})",
+                "    #\"Replace Value\" = Table.ReplaceValue(#\"Capitalized Each Word\",\"-\",\" \",Replacer.ReplaceText,{\"Domain\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Replace Value\", \"FullName\", each Text.Combine({[Title],[FirstName],[LastName]},\" \"))",
                 "in",
-                "    #\"Replace Value\""
+                "    #\"Added Custom\""
               ],
               "type": "m"
             }
